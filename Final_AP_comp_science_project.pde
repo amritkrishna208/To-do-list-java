@@ -1,6 +1,6 @@
 ArrayList<Task> tasks;
 String inputText = "";
-boolean typing = false;
+boolean typing = true;
 
 void setup() {
   size(1000, 800);
@@ -51,7 +51,7 @@ void keyPressed() {
     } else if (keyCode == ENTER && inputText.length() > 0) {
       addTask(inputText);
       inputText = "";
-      typing = false;
+      //typing = false;
     } else if (keyCode != SHIFT && key != CODED) {
       inputText += key;
       
@@ -65,7 +65,7 @@ void keyPressed() {
       }
       
       if (!taskExists) {
-        typing = false; 
+        //typing = false; 
       }
     }
   }
